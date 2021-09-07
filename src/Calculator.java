@@ -13,7 +13,7 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
-        List<Character> operations = Arrays.asList('+', '-', '/', 'x');
+        List<Character> operations = Arrays.asList('+', '-', '/', 'x', '%');
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter an Operator: ");
         String in = sc.next();
@@ -55,10 +55,11 @@ public class Calculator {
         } else if (oper == '/') {
             double result = num1 / num2;
             System.out.println(result);
-        } else {
-            double result = num1 % num2;
+        } else if (oper == '%') {
+            double result = (num1 * num2) / 100;
             System.out.println(result);
+        } else {
+            System.out.println("Inserted operation is not supported");
         }
     }
-
 }
