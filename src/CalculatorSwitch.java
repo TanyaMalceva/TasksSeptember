@@ -42,7 +42,6 @@ public class CalculatorSwitch {
         }
         double num2 = Double.parseDouble(in);
 
-
         switch (oper) {
             case '+':
                 System.out.println(num1 + num2);
